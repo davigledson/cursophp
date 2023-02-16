@@ -9,7 +9,7 @@
 <body>
     <h1>Dados do Servidor</h1>
     <?php 
-   // phpinfo(); Evitar dados sensíveis serem vazados
+   // phpinfo(); = Gera dados do servidor - não executei para evitar dados sensíveis serem vazados
     
     ?>
 </body>
