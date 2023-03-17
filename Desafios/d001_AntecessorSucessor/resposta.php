@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Estilos/style.css">
-    <title>Resultado</title>
+    <title>Desafio PHP</title>
 </head>
 <body>
     <header>
-        <h1>Resultado </h1>
+        <h1>Resultado Final</h1>
     </header>
     <main>
         <?php 
-        $numero = null;
-        $numero = $_GET['numero'] ?? "Não há nenhum numero";
-
-        if($numero ==null or is_numeric($numero) == false){
-            $numero = 0;
-        };
+       
+        $numero = $_REQUEST["numero"];
+        if($numero ==null){
+            $numero=0;
+        }
+        
         $ant= $numero -1 ;
         $sus = $numero +1 ;
         
@@ -29,7 +29,7 @@
         echo "<p>O seu Antecessor é: <strong>$ant</strong></p>";
         ?>
 
-        <p><a href="javascript:history.go(-1)">Voltar para pagina anterior</a></p>
+        <button onclick="javascript:window.location.href ='index.html'">&#x2B05; Voltar</button>
     </main>
 
 </body>
