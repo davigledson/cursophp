@@ -14,9 +14,16 @@
     <main>
         <?php 
         $numero = $_GET['numero'];
-        $numNormal = number_format($_GET['numero'],2,',','.');
-        $numInteiro=floatval($numNormal);
-        $numFracional =strpos($numero,',');
+        $numNormal =number_format($numero,3,',','.');
+        
+        $numFracionalPosicao =strpos($numNormal,',');
+
+        $numInteiro=mb_strcut($numNormal,0,$numFracionalPosicao);
+        
+            $numFracional=mb_strcut($numNormal,$numFracionalPosicao+1);
+        
+            
+        
         echo "<p>$numNormal</p>";
         echo "<p>A parte inteira é <strong>$numInteiro</strong></p>";
         echo "<p>A parte fracionaria é <strong>$numFracional</strong></p>";
