@@ -14,14 +14,16 @@
         </h1>
     </header>
     <section>
-        <form action="cad.php" method="get">
-
-            <label for="dinheiro">Quantos R$ você tem na carteira?</label>
-            <input type="number" name="dinheiro" id="idnome">
-
-            <input type="submit" value="Enviar">
-
-
+        <form action="conversao.php" method="get">
+    
+            <label for="dinheiro">
+                Quantos R$ você tem na carteira?
+            </label>
+            <input type="number" name="dinheiro" id="idnome" step="0.01">
+    
+            <input type="submit" value="Converter">
+    
+    
         </form>
     </section>
 </body>
